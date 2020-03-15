@@ -1,5 +1,2 @@
-class InvoiceLine < ActiveRecord::Base
-  belongs_to :invoice
-
-  belongs_to :track
+class InvoiceLine < ApplicationRecord
 end

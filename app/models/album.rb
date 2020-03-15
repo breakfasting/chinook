@@ -1,5 +1,2 @@
-class Album < ActiveRecord::Base
-  belongs_to :artist
-
-  has_many :tracks
+class Album < ApplicationRecord
 end

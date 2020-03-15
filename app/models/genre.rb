@@ -1,3 +1,2 @@
-class Genre < ActiveRecord::Base
-  has_many :tracks
+class Genre < ApplicationRecord
 end

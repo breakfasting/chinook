@@ -1,3 +1,2 @@
-class MediaType < ActiveRecord::Base
-  has_many :tracks
+class MediaType < ApplicationRecord
 end
