@@ -15,19 +15,5 @@
 #  customer_id         :integer
 #
 class Invoice < ApplicationRecord
-
-    belongs_to :customer,
-        primary_key: :id,
-        foreign_key: :customer_id,
-        class_name: :Customer
-
-    has_many :items,
-        primary_key: :id,
-        foreign_key: :invoice_id,
-        class_name: :InvoiceLine
-
-    has_many :tracks,
-        through: :items,
-        source: :track
     
 end

@@ -1,4 +1,3 @@
-# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -11,113 +10,113 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130824172651) do
+ActiveRecord::Schema.define(version: 2013_08_24_172651) do
 
-  create_table "albums", force: true do |t|
-    t.string   "title"
-    t.integer  "artist_id"
+  create_table "albums", force: :cascade do |t|
+    t.string "title"
+    t.integer "artist_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "artists", force: true do |t|
-    t.string   "name"
+  create_table "artists", force: :cascade do |t|
+    t.string "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "customers", force: true do |t|
-    t.string   "first_name"
-    t.string   "last_name"
-    t.string   "company"
-    t.string   "address"
-    t.string   "city"
-    t.string   "state"
-    t.string   "country"
-    t.string   "postal_code"
-    t.string   "phone"
-    t.string   "fax"
-    t.string   "email"
-    t.integer  "support_rep_id"
+  create_table "customers", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "company"
+    t.string "address"
+    t.string "city"
+    t.string "state"
+    t.string "country"
+    t.string "postal_code"
+    t.string "phone"
+    t.string "fax"
+    t.string "email"
+    t.integer "support_rep_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "employees", force: true do |t|
-    t.string   "first_name"
-    t.string   "last_name"
-    t.string   "title"
-    t.integer  "reports_to"
+  create_table "employees", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "title"
+    t.integer "reports_to"
     t.datetime "birthdate"
     t.datetime "hiredate"
-    t.string   "address"
-    t.string   "city"
-    t.string   "state"
-    t.string   "country"
-    t.string   "postal_code"
-    t.string   "phone"
-    t.string   "fax"
-    t.string   "email"
+    t.string "address"
+    t.string "city"
+    t.string "state"
+    t.string "country"
+    t.string "postal_code"
+    t.string "phone"
+    t.string "fax"
+    t.string "email"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "genres", force: true do |t|
-    t.string   "name"
+  create_table "genres", force: :cascade do |t|
+    t.string "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "invoice_lines", force: true do |t|
-    t.integer  "invoice_id"
-    t.integer  "track_id"
-    t.float    "unit_price"
-    t.integer  "quantity"
+  create_table "invoice_lines", force: :cascade do |t|
+    t.integer "invoice_id"
+    t.integer "track_id"
+    t.float "unit_price"
+    t.integer "quantity"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "invoices", force: true do |t|
-    t.integer  "customer_id"
+  create_table "invoices", force: :cascade do |t|
+    t.integer "customer_id"
     t.datetime "invoice_date"
-    t.string   "billing_address"
-    t.string   "billing_city"
-    t.string   "billing_state"
-    t.string   "billing_country"
-    t.string   "billing_postal_code"
-    t.float    "total"
+    t.string "billing_address"
+    t.string "billing_city"
+    t.string "billing_state"
+    t.string "billing_country"
+    t.string "billing_postal_code"
+    t.float "total"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "media_types", force: true do |t|
-    t.string   "name"
+  create_table "media_types", force: :cascade do |t|
+    t.string "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "playlists", force: true do |t|
-    t.string   "name"
+  create_table "playlists", force: :cascade do |t|
+    t.string "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "playlists_tracks", id: false, force: true do |t|
-    t.integer  "playlist_id"
-    t.integer  "track_id"
+  create_table "playlists_tracks", id: false, force: :cascade do |t|
+    t.integer "playlist_id"
+    t.integer "track_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "tracks", force: true do |t|
-    t.string   "name"
-    t.integer  "album_id"
-    t.integer  "media_type_id"
-    t.integer  "genre_id"
-    t.string   "composer"
-    t.integer  "milliseconds"
-    t.integer  "bytes"
-    t.float    "unit_price"
+  create_table "tracks", force: :cascade do |t|
+    t.string "name"
+    t.integer "album_id"
+    t.integer "media_type_id"
+    t.integer "genre_id"
+    t.string "composer"
+    t.integer "milliseconds"
+    t.integer "bytes"
+    t.float "unit_price"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

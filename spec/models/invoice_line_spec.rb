@@ -1,3 +1,15 @@
+# == Schema Information
+#
+# Table name: invoice_lines
+#
+#  id         :integer          not null, primary key
+#  quantity   :integer
+#  unit_price :float
+#  created_at :datetime
+#  updated_at :datetime
+#  invoice_id :integer
+#  track_id   :integer
+#
 require 'rails_helper'
 
 RSpec.describe InvoiceLine, type: :model do
@@ -7,7 +19,7 @@ RSpec.describe InvoiceLine, type: :model do
     expect(invoice_item.track.name).to eq('Balls to the Wall')
   end
 
-  it "has a header" do
-    expect(invoice_item.header.total).to eq(1.98)
+  it "belongs to a invoice" do
+    expect(invoice_item.invoice.total).to eq(1.98)
   end
 end

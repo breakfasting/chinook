@@ -21,7 +21,6 @@
 #  updated_at  :datetime
 #
 class Employee < ApplicationRecord
-
     belongs_to :manager,
         primary_key: :id,
         foreign_key: :reports_to,
@@ -32,5 +31,4 @@ class Employee < ApplicationRecord
         primary_key: :id,
         foreign_key: :support_rep_id,
         class_name: :Customer
-    
 end

@@ -1,3 +1,12 @@
+# == Schema Information
+#
+# Table name: playlists_tracks
+#
+#  created_at  :datetime
+#  updated_at  :datetime
+#  playlist_id :integer
+#  track_id    :integer
+#
 require 'rails_helper'
 
 RSpec.describe PlaylistsTrack, type: :model do

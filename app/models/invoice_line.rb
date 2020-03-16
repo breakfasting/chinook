@@ -11,15 +11,5 @@
 #  track_id   :integer
 #
 class InvoiceLine < ApplicationRecord
-
-    belongs_to :track,
-        primary_key: :id,
-        foreign_key: :track_id,
-        class_name: :Track
-
-    belongs_to :header,
-        primary_key: :id,
-        foreign_key: :invoice_id,
-        class_name: :Invoice
     
 end
