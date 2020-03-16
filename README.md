@@ -8,14 +8,14 @@ ________________________________________________________________________________
 Wayne and Shaphen want to give you more opportunities to practice.
 So here you go!
 
-# Note: this practice is in a repository. Do not nest this into your git repo
+## Note: this practice is in a repository. Do not nest this into your git repo
 
-# They highly recommend you start with:
+## They highly recommend you start with:
  - bundle install
  - rails db:setup <!-- note: this may take a few minutes to install -->
  - bundle exec rspec
 
-# a/A generally recommends you approach these problems in the order of:
+## a/A generally recommends you approach these problems in the order of:
  - completing belongs_to first
  - working on has_many next
  - finishing with throughs
@@ -23,7 +23,7 @@ So here you go!
 Don't forget to utilize your schema in 'db/schema.rb'
 
 ________________________________________________________________________________
-# TABLE DESCRIPTION: There are 11 tables in the chinook database.
+## TABLE DESCRIPTION: There are 11 tables in the chinook database.
 
  - employees table stores employees data such as employee id, last name, first 
  name, etc. It also has a field named ReportsTo to specify who reports to whom.
