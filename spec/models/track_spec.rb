@@ -14,11 +14,13 @@
 #  genre_id      :integer
 #  media_type_id :integer
 #
-class Track < ApplicationRecord
+require 'rails_helper'
 
-    belongs_to :genre,
-        primary_key: :id,
-        foreign_key: :genre_id,
-        class_name: :Genre
-    
+RSpec.describe Track, type: :model do
+  # pending "add some examples to (or delete) #{__FILE__}"
+  subject(:track) { Track.first }
+
+  it "has a genre" do
+    expect(track.genre.name).to eq("Rock")
+  end
 end

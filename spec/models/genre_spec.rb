@@ -7,11 +7,10 @@
 #  created_at :datetime
 #  updated_at :datetime
 #
-class Genre < ApplicationRecord
+require 'rails_helper'
 
-    has_many :tracks,
-        primary_key: :id,
-        foreign_key: :genre_id,
-        class_name: :Track
-    
+RSpec.describe Genre, type: :model do
+  # pending "add some examples to (or delete) #{__FILE__}"
+  # subject(:genre) { Genre.first }
+
 end
