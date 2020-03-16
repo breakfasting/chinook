@@ -23,4 +23,9 @@ RSpec.describe Track, type: :model do
   it "has a genre" do
     expect(track.genre.name).to eq("Rock")
   end
+
+  it "has a album"
+  it "has a mediatype"
+  it "has playlists entries"
+  it "has playlists through playlist entries"
 end
