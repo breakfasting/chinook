@@ -8,4 +8,14 @@
 #  updated_at :datetime
 #
 class Playlist < ApplicationRecord
+
+    has_many :playlist_entries,
+        primary_key: :id,
+        foreign_key: :playlist_id,
+        class_name: :PlaylistsTrack
+
+    has_many :tracks,
+        through: :playlist_entries,
+        source: :track
+    
 end

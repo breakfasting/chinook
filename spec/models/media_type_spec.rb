@@ -1,5 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe MediaType, type: :model do
-  it "has tracks"
+  subject(:type1) { MediaType.first }
+  it "has tracks" do
+    expect(type1.tracks.count).to eq(3034)
+  end
 end

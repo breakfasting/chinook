@@ -20,5 +20,29 @@ class Track < ApplicationRecord
         primary_key: :id,
         foreign_key: :genre_id,
         class_name: :Genre
+
+    belongs_to :album,
+        primary_key: :id,
+        foreign_key: :album_id,
+        class_name: :Album
+
+    belongs_to :media_type,
+        primary_key: :id,
+        foreign_key: :media_type_id,
+        class_name: :MediaType
+
+    has_many :invoice_items,
+        primary_key: :id,
+        foreign_key: :track_id,
+        class_name: :InvoiceLine
+
+    has_many :playlist_track,
+        primary_key: :id,
+        foreign_key: :track_id,
+        class_name: :PlaylistsTrack
+
+    has_many :playlists,
+        through: :playlist_track,
+        source: :playlist
     
 end

@@ -8,4 +8,10 @@
 #  updated_at :datetime
 #
 class MediaType < ApplicationRecord
+
+    has_many :tracks,
+        primary_key: :id,
+        foreign_key: :media_type_id,
+        class_name: :Track
+    
 end
