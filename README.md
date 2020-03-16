@@ -1,5 +1,6 @@
 # README
 db source: https://github.com/lerocha/chinook-database
+db diagram: https://www.sqlitetutorial.net/sqlite-sample-database/
 ________________________________________________________________________________
 **DISCLAIMER: THIS IS NOT AN OFFICIAL PRACTICE ASSESSMENT BY APP ACADEMY**
 ________________________________________________________________________________
